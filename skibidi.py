@@ -34,7 +34,7 @@ for arquivo in arquivos:
     with open(arquivo, "rb") as file:
         conteudo = file.read()
 
-        conteudo_descriptografado = Fernet(chave_secreta).descrypt(conteudo)
+        conteudo_descriptografado = Fernet(chave_secreta).decrypt(conteudo)
 
         with open(arquivo, "wb") as file:
             file.write(conteudo_descriptografado)
